@@ -18,21 +18,19 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <div className="flex">
             <div
-              className="hidden md:block bg-[#200635] max-w-xs h-screen 
-          overflow-y-auto md:min-w-[16rem]"
+              className="hidden lg:block bg-[#200635] max-w-xs h-screen 
+          overflow-y-hidden md:min-w-[16rem] px-2 pt-2 pb-2"
             >
               <SideBar />
             </div>
-            <div className="flex-col">
-              <div className="block md:hidden">
+            <div className="flex-col w-screen">
+              <div className="block lg:hidden">
                 <NavBar />
               </div>
 
               {/* ClientProvider - Notificaton */}
 
-              <div className="bg-purple-900 overflow-y-scroll flex-1">
-                {children}
-              </div>
+              <div className="bg-purple-900 flex-1">{children}</div>
             </div>
           </div>
         </SessionProvider>

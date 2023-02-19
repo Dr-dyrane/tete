@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="flex flex-col text-white justify-center items-center min-h-screen px-2">
       <h1 className="text-5xl font-bold mb-20">TêteBöT</h1>
 
-      <div className="space-x-2 flex text-xs md:text-xl">
+      <div className="space-x-2 flex text-xs md:text-xs lg:text-sm">
         <div>
           <div className="flex flex-col items-center justify-center mb-5 md:mb-6">
             <SunIcon className="h-8 w-8" />
