@@ -10,7 +10,10 @@ export default function Login() {
     items-center justify-center space-y-8 flex flex-col"
     >
       <Image src="/images/tete.png" width={150} height={150} alt="logo" />
-      <button className="font-bold text-3xl animate-pulse">
+      <button
+        onClick={() => signIn("google")}
+        className="font-bold text-3xl animate-pulse"
+      >
         Sign In to use TêteBöT
       </button>
     </div>
