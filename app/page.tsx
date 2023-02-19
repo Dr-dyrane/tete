@@ -6,10 +6,13 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col text-white justify-center items-center min-h-screen px-2">
-      <h1 className="text-5xl font-bold mb-20">TêteBöT</h1>
+    <div className="flex flex-col text-white justify-center items-center min-h-screen px-2 space-y-2">
+      <h1 className="text-5xl mt-2 font-bold md:mb-20">TêteBöT</h1>
 
-      <div className="space-x-2 flex text-xs md:text-xs lg:text-sm">
+      <div
+        id=""
+        className="space-y-4 md:space-y-1 md:space-x-2 md:flex text-xs md:text-xs lg:text-sm"
+      >
         <div>
           <div className="flex flex-col items-center justify-center mb-5 md:mb-6">
             <SunIcon className="h-8 w-8" />
