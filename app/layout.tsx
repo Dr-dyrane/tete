@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import { getServerSession } from "next-auth";
 import "../styles/globals.css";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
+import Login from "../components/Login";
 
 export default async function RootLayout({
   children,
@@ -16,23 +17,27 @@ export default async function RootLayout({
       <head />
       <body>
         <SessionProvider session={session}>
-          <div className="flex">
-            <div
-              className="hidden lg:block bg-[#200635] max-w-xs h-screen 
+          {!session ? (
+            <Login />
+          ) : (
+            <div className="flex">
+              <div
+                className="hidden lg:block bg-[#200635] max-w-xs h-screen 
           overflow-y-hidden md:min-w-[16rem] px-2 pt-2 pb-2"
-            >
-              <SideBar />
-            </div>
-            <div className="flex-col w-screen">
-              <div className="block lg:hidden">
-                <NavBar />
+              >
+                <SideBar />
               </div>
+              <div className="flex-col w-screen">
+                <div className="block lg:hidden">
+                  <NavBar />
+                </div>
 
-              {/* ClientProvider - Notificaton */}
+                {/* ClientProvider - Notificaton */}
 
-              <div className="bg-purple-900 flex-1">{children}</div>
+                <div className="bg-purple-900 flex-1">{children}</div>
+              </div>
             </div>
-          </div>
+          )}
         </SessionProvider>
       </body>
     </html>
