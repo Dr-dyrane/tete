@@ -1,4 +1,4 @@
-import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
+import { ChatBubbleLeftIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
 type Props = {
@@ -7,8 +7,9 @@ type Props = {
 
 export default function ChatRow({ id }: Props) {
   return (
-    <Link className="chatRow" href={`/chat/${id}`}>
-      <ChatBubbleLeftIcon className="h‐5 w‐5" />
+    <Link className="flex chatRow px-1 justify-start" href={`/chat/${id}`}>
+      <ChatBubbleLeftIcon className="h-5 w-5" />
+      <p>Chatheader</p>
     </Link>
   );
 }
