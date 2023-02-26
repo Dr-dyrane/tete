@@ -23,7 +23,7 @@ export default async function RootLayout({
             <div className="flex">
               <div
                 className="hidden lg:block bg-[#200635] max-w-xs h-screen 
-          overflow-y-hidden md:min-w-[16rem] px-2 pt-2 pb-2"
+          overflow-y-hidden md:min-w-[17.5rem] px-2 pt-2 pb-2"
               >
                 <SideBar />
               </div>
