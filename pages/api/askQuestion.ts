@@ -31,7 +31,8 @@ export default async function handler(
     user: {
       _id: "teteBOT",
       name: "teteBOT",
-      avatar: "../../public/images/tete.png",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/tete-47296.appspot.com/o/tete.png?alt=media&token=1fc4d9a0-7826-4673-af94-c4cf52d6c7f5",
     },
   };
 
